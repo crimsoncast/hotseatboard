@@ -47,7 +47,7 @@ window.HOTSEAT = {
     { id:"fickell", coach:"Luke Fickell", team:"Wisconsin", prob:58, cbs:"5.0",
       stats:[ ["Record","16–21 at WIS"], ["Buyout","$25M → $19.2M"], ["Schedule","Misses OSU·UM·UO·IU"], ["The line","Reach a bowl or out"] ],
       notes:[
-        "The hottest seat in the league and one of three coaches nationally to draw a unanimous 5.0 from CBS. Fickell is 16–21 in Madison for a program that didn't post a losing season from 2002 through 2023, and last year got asked by Wisconsin whether he was all-in or wanted to hit the eject button --- which is a pretty clear indicator of things being tenuous. He \"barely hung on\" this past offseason.",
+        "The hottest seat in the league and one of three coaches nationally to draw a unanimous 5.0 from CBS. Fickell is 16–21 in Madison for a program that didn't post a losing season from 2002 through 2023, and last year got asked by Wisconsin whether he was all-in or wanted to hit the eject button, a pretty clear indicator of things being tenuous. He \"barely hung on\" this past offseason.",
         "The buyout — which steps down from roughly $25M to about $19.2M once he's coached the full 2026 season — is real protection, but its bite is softened by a payout structure spread over several years rather than a crippling lump sum, which makes pulling the trigger more palatable than the headline number suggests. The decisive factor is the schedule: Wisconsin opens against Notre Dame at Lambeau (a likely loss that won't be held against him), then gets two very winnable non-conference games, and critically <em>misses Indiana, Oregon, Ohio State and Michigan</em> in Big Ten play — about as forgiving a draw as exists in the 18-team league. It gives Fickell a genuine path to bowl eligibility while removing every excuse if he can't find it. A third straight sub-.500 season against this slate probably ends Fickell's tenure."
       ] },
     { id:"locksley", coach:"Mike Locksley", team:"Maryland", prob:50, cbs:"4.9",
@@ -59,18 +59,18 @@ window.HOTSEAT = {
     { id:"riley", coach:"Lincoln Riley", team:"USC", prob:10, cbs:"3.8",
       stats:[ ["Context","Yr 5 · pressure building"], ["Buyout","Among sport's largest"], ["Investment","No. 1 recruiting class"], ["The line","Real risk is 2027"] ],
       notes:[
-        "The rating (3.8) says warm; the balance sheet says almost untouchable for one more year. Riley's buyout is among the very largest in the sport, which makes an in-season or postseason firing a near-impossibility barring total collapse. USC has also signaled all-in commitment: the No. 1 recruiting class in the country, returning QB Jayden Maiava, and a splashy hire of Gary Patterson as defensive coordinator.",
-        "The pressure is unmistakably building — a difficult midseason stretch could define his future <em>beyond</em> 2026 — but the money and the fresh investment make an actual 2026 dismissal unlikely. The real risk year is 2027 if this doesn't work."
+        "The rating (3.8) says warm, but the balance sheet says almost untouchable for at least one more year. Riley's buyout (estimated to sit somewhere between <em>$80 million and $90 million</em>) is among the very largest in the sport, which makes an in-season or postseason firing a near-impossibility barring total collapse. USC has also signaled all-in commitment: the No. 1 recruiting class in the country, returning QB Jayden Maiava, and a splashy hire of former TCU head coach Gary Patterson as defensive coordinator.",
+        "The pressure is unmistakably building, and a difficult midseason stretch could define his future <em>beyond</em> 2026, but the money and the fresh investment make an actual 2026 dismissal unlikely. The real risk year is 2027 if this doesn't work."
       ] },
     { id:"rhule", coach:"Matt Rhule", team:"Nebraska", prob:6, cbs:"3.0",
       stats:[ ["Record","First bowl since '18"], ["Buyout","Large (8-yr deal)"], ["The line","Only a collapse moves it"] ],
       notes:[
-        "Anxiety is rising (3.0) and the fanbase wants more, but Nebraska made its first bowl in seven years, the program finally looks stable, and Rhule's eight-year contract carries a buyout large enough that only a scandal or a shocking collapse moves him."
+        "Anxiety is rising (3.0) and the fanbase wants more, but Nebraska made its first bowl in seven years, the program finally looks stable, and Rhule's eight-year contract carries a buyout large enough that only a scandal or a shocking collapse moves him. Rhule's quick dismissal of the Penn State job last year, despite longtime friend and former boss Pat Kraft in the AD role in Happy Valley, might indicate that Rhule has some internal job security, at least in the short term."
       ] },
     { id:"schiano", coach:"Greg Schiano", team:"Rutgers", prob:5, cbs:"2.8",
       stats:[ ["Record","Bowl team"], ["Buyout","Modest; values continuity"], ["The line","A losing year warms it"] ],
       notes:[
-        "A 2.8 reflects real but manageable pressure. Rutgers made a bowl, isn't eager to eat a buyout, and generally values continuity. A losing regression would warm this considerably, but the baseline is safe."
+        "A 2.8 reflects real but manageable pressure. Rutgers made a bowl, isn't eager to eat a buyout, and generally values continuity. Schiano is also a legend within the program, and sits as the all-time winningest head coach in Rutgers history. A losing regression would warm the seat considerably, but the baseline is safe."
       ] },
     { coach:"David Braun", team:"Northwestern", prob:4, cbs:"2.5" },
     { coach:"Barry Odom", team:"Purdue", prob:3, cbs:"1.8" },
