@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Hot Seat — Scouting Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d1520; --panel:#141f2c; --panel-2:#18242f;
+    --line:#243447; --line-soft:#1c2836;
+    --fg:#e9eef3; --fg-mid:#9fb0c1; --fg-dim:#6b7d90;
+    --h-scorch:#f2412c; --h-hot:#ec6a2c; --h-warm:#e0a33f; --cold:#496a7e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    background:radial-gradient(1100px 560px at 78% -12%, #17273a 0%, rgba(23,39,58,0) 60%),var(--ink);
+    color:var(--fg);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.5;
+    padding:clamp(20px,4vw,52px) clamp(16px,4vw,44px) 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+
+  .back{display:inline-flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;
+    font-size:12px;letter-spacing:.04em;color:var(--fg-mid);text-decoration:none;
+    border:1px solid var(--line);border-radius:6px;padding:6px 11px;
+    transition:border-color .15s,color .15s}
+  .back:hover{color:var(--fg);border-color:var(--h-hot)}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--fg-dim);margin:22px 0 12px}
+  .eyebrow b{color:var(--h-hot);font-weight:600;letter-spacing:.1em}
+  h1{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:clamp(34px,6vw,60px);
+    line-height:.94;text-transform:uppercase;letter-spacing:-.01em}
+  h1 .flare{color:transparent;
+    background:linear-gradient(92deg,var(--h-scorch),var(--h-hot) 55%,var(--h-warm));
+    -webkit-background-clip:text;background-clip:text}
+  .lede{margin-top:14px;max-width:70ch;color:var(--fg-mid);font-size:15px}
+
+  .index{margin:30px 0 8px;padding:20px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line-soft);border-radius:10px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:820px){.index{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.index{grid-template-columns:1fr}}
+  .index h4{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:17px;
+    text-transform:uppercase;letter-spacing:.01em;margin-bottom:9px;color:var(--fg);
+    border-bottom:1px solid var(--line);padding-bottom:6px}
+  .index a{display:flex;align-items:baseline;justify-content:space-between;gap:8px;
+    text-decoration:none;color:var(--fg-mid);padding:4px 0;font-size:13.5px;transition:color .15s}
+  .index a:hover{color:#fff}
+  .index a .ix-p{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12.5px}
+
+  .entry{margin-top:16px;padding:22px 22px 20px 26px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line-soft);border-left-width:4px;border-radius:10px;scroll-margin-top:16px}
+  .etop{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin-bottom:4px}
+  .tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--fg-dim)}
+  .entry h2{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:30px;
+    line-height:1;letter-spacing:.005em}
+  .entry h2 .tm{color:var(--fg-mid);font-weight:500;font-size:20px;margin-left:4px}
+  .metrics{display:flex;align-items:baseline;gap:9px;margin-left:auto}
+  .m-prob{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:26px;
+    font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .m-cbs{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--fg-dim);
+    border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+
+  /* compact stats strip */
+  .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .stat{background:rgba(255,255,255,.03);border:1px solid var(--line-soft);
+    border-radius:7px;padding:6px 11px}
+  .stat .l{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--fg-dim);display:block}
+  .stat .v{font-size:13px;color:var(--fg);margin-top:2px;font-weight:500}
+
+  .entry p{margin-top:12px;color:#d4dde6;font-size:15px}
+  .entry p + p{margin-top:11px}
+  .totop{display:inline-block;margin-top:14px;font-family:"IBM Plex Mono",monospace;
+    font-size:11px;letter-spacing:.08em;color:var(--fg-dim);text-decoration:none;text-transform:uppercase}
+  .totop:hover{color:var(--h-hot)}
+
+  .conf-rule{margin:34px 0 4px;display:flex;align-items:center;gap:12px;
+    font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:22px;
+    text-transform:uppercase;letter-spacing:.02em;color:var(--fg)}
+  .conf-rule::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  footer{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--fg-dim);
+    line-height:1.7;max-width:82ch}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a class="back" href="index.html">← Back to the board</a>
+  <div class="eyebrow" id="eyebrow">Companion notes</div>
+  <h1>Scouting <span class="flare">Notes</span></h1>
+  <p class="lede">The full rationale behind every seat rated <b>5% or hotter</b> — the buyout math, the athletic-director politics, the schedule runway, and the win threshold that saves each job. Drawn from the four conference models. Jump to any name below.</p>
+
+  <nav class="index" id="index"></nav>
+  <div id="entries"></div>
+
+  <footer id="footer"></footer>
+</div>
+
+<script src="hotseat-data.js"></script>
+<script>
+const H = window.HOTSEAT;
+const HEAT = [{min:40,col:"#f2412c"},{min:20,col:"#ec6a2c"},{min:5,col:"#e0a33f"},{min:2,col:"#b8a763"},{min:0,col:"#496a7e"}];
+function heatColor(p){ for(const h of HEAT){ if(p>=h.min) return h.col; } return "#496a7e"; }
+function probLabel(p){ return p < 1 ? "<1%" : Math.round(p)+"%"; }
+const LINKMIN = 5;
+
+// header meta
+document.getElementById("eyebrow").innerHTML =
+  `Companion notes · <b>${H.meta.week}</b> · Updated ${H.meta.updated}`;
+
+// gather noted coaches, ranked within their conference (matching the board's sort)
+const groups = [];
+for(const conf of H.conferences){
+  const sorted = conf.coaches.slice().sort((a,b)=> b.prob - a.prob);
+  const items = [];
+  sorted.forEach((c,i)=>{ if(c.prob >= LINKMIN && c.notes && c.id) items.push(Object.assign({rank:i+1}, c)); });
+  if(items.length) groups.push({conf:conf.name, items});
+}
+
+// index
+document.getElementById("index").innerHTML = groups.map(g=>
+  `<div><h4>${g.conf}</h4>` +
+  g.items.map(c=>`<a href="#${c.id}"><span>${c.coach}</span><span class="ix-p" style="color:${heatColor(c.prob)}">${probLabel(c.prob)}</span></a>`).join("") +
+  `</div>`
+).join("");
+
+// entries
+document.getElementById("entries").innerHTML = groups.map(g=>
+  `<div class="conf-rule">${g.conf}</div>` +
+  g.items.map(c=>{
+    const col = heatColor(c.prob);
+    const stats = (c.stats||[]).map(s=>`<div class="stat"><span class="l">${s[0]}</span><span class="v">${s[1]}</span></div>`).join("");
+    const paras = (c.notes||[]).map(p=>`<p>${p}</p>`).join("");
+    return `<article class="entry" id="${c.id}" style="border-left-color:${col}">`+
+      `<div class="etop"><div><div class="tag">${g.conf} · #${c.rank}</div>`+
+      `<h2>${c.coach} <span class="tm">${c.team}</span></h2></div>`+
+      `<div class="metrics"><span class="m-prob" style="color:${col}">${probLabel(c.prob)}</span>`+
+      `<span class="m-cbs">CBS ${c.cbs}</span></div></div>`+
+      (stats?`<div class="stats">${stats}</div>`:``)+
+      paras+
+      `<a class="totop" href="#top">↑ Top</a>`+
+      `</article>`;
+  }).join("")
+).join("");
+
+// footer
+document.getElementById("footer").innerHTML =
+  `Notes correspond to the four conference firing-probability models (Big Ten, SEC, ACC, Big 12), ${H.meta.week.toLowerCase()} 2026. `+
+  `Probabilities are holistic estimates combining buyout structure, expert/CBS sentiment, AD alignment and schedule — not outputs of a formal statistical model — and measure performance-based dismissal only. `+
+  `Expert-sentiment anchor: CBS Sports 2026 Hot Seat Rankings, released July 15. `+
+  `Keep this file, index.html, and hotseat-data.js in the same folder so the links and data load correctly.`;
+</script>
+</body>
+</html>
